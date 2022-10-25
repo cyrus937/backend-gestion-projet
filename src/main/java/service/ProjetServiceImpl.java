@@ -49,6 +49,7 @@ public class ProjetServiceImpl implements ProjetService {
 
     @Override
     public List<Projet> findByDateCreationDesc() {
+        System.out.println("Bonjour");
         return projetRepository.findAll().stream()
                 .sorted(Comparator.comparing(Projet::getDateCreation).reversed())
                 .collect(Collectors.toList());
